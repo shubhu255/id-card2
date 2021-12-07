@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="back">
+    <form>
+      <h3>Please fill-in the form</h3>
+      <label>Full Name</label>
+      <input type="text" id="inName"   placeholder="Your name...">
+      
+      <label>Collage Name</label>
+      <input type="text" id="inCollage"  placeholder="Collage Name">
+      <label>Location</label>
+      <input type="text" id="inlocation" placeholder="Location">
+      
+      <label for="file" class="upload">Choose file</label>
+      <br>
+ 
+      <input type="file" id="file" accept="image/*" onchange="loadImage(event)">
+    </form>
+      <button type="submit" id="preview">Preview</button>
+
+
+    <div class="container">
+      <canvas id="result" class="card">
+
+        <header id="head">
+          <div class="camp">
+            <h4>Generated ID card</h4>
+        
+          </div>
+          <img src="./images/download.jpg" id="logo">
+        </header>
+
+        <div class="content">
+          <img src="" id="imgDisplayed">
+          <ul>
+            <li id="name"></li>
+            <li id="Collage"></li>
+            <li id="Location"></li>
+         
+          </ul>
+        </div>
+
+    </canvas>
+    <button id="down">Download</button>
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
